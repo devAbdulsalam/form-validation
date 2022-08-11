@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="form_page">
+			<div id="register_form" class="container">
+				<div class="box">
+					<form action="#">
+						<h1>Welcome To AmTech</h1>
+						<div>
+							<p id="errmsg" class="errmsg"></p>
+						</div>
+						<div class="row">
+							<label for="firstName">FirstName:</label>
+							<input
+								type="text"
+								id="firstName"
+								value=""
+								placeholder="Yusuf Chiroma"
+								required
+							/>
+						</div>
+						<div class="row">
+							<label for="lastName">Last Name:</label>
+							<input
+								type="text"
+								id="lastName"
+								value=""
+								placeholder="Adekunle"
+								required
+							/>
+						</div>
+						<div class="row">
+							<label for="Email">Email</label>
+							<input
+								type="email"
+								id="email"
+								value=""
+								placeholder="abc@gmail.com"
+								required
+							/>
+						</div>
+						<div class="row">
+							<label for="password">Password</label>
+							<input
+								type="password"
+								id="password"
+								onkeyup="trigger()"
+								value=""
+								placeholder="password"
+								required
+							/>
+						</div>
+						<div class="passwordalert hidePM">
+							<div class="passwordMeter">
+								<span id="weak" class="weak"></span>
+								<span id="medium"></span>
+								<span id="strong"></span>
+							</div>
+							<div>
+								<p id="passwordtext" class="pswdtext"></p>
+							</div>
+						</div>
+						<div class="row">
+							<label for="password">Confirm Password</label>
+							<input
+								type="password"
+								id="confirmPswd"
+								value=""
+								placeholder="password"
+								required
+							/>
+						</div>
+						<div class="check_box">
+							<label for="newsletter">Subscribe to our Newsletter</label>
+							<input type="checkbox" id="newsletter" />
+						</div>
+
+						<div class="btn">
+							<button type="submit" class="showAlert">Sign up</button>
+							<button type="button" class="showLogin">Login in</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- sign in form -->
+			<div id="login_form" class="container hide">
+				<div class="box">
+					<form action="#">
+						<h1>Sign In Form</h1>
+						<p id="errmsg" class="errmsg"></p>
+						<div class="row">
+							<label for="email">Email</label>
+							<input type="email" id="loginEmail" placeholder="abc@gmail.com" />
+						</div>
+						<div class="row">
+							<label for="password">Password</label>
+							<input
+								type="password"
+								id="loginPswd"
+								value=""
+								placeholder="password"
+								required
+							/>
+						</div>
+						<div class="btn">
+							<button type="button" class="logIn">Login in</button>
+							<button type="button" class="showRegister">
+								Sign up Instead
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- alert for succesfull login -->
+			<div id="alertmsg" class="container hide">
+				<div class="box">
+					<div id="msg" class="info">
+						<!-- messages would be from javascript -->
+					</div>
+					<div>
+						<div id="newsletterBtn" class="check_box">
+							<p>You are login</p>
+							<p>You have did not subscrib for our Newsletter</p>
+							<p>To subscrib to get the latest update of our products and	services</p>
+								<input type="checkbox" id="subscribForNewsletter" />
+							</p>
+						</div>
+						<div>
+							<button type="button" class="refresh">Ok</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="script.js"></script>
+	</body>
+</html>
